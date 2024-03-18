@@ -1,0 +1,35 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:GetReplicationConfiguration",
+                "s3:GetObjectVersionForReplication",
+                "s3:InitiateReplication",
+                "s3:PutInventoryConfiguration",
+                "s3:GetObjectVersionAcl",
+                "s3:GetObjectVersionTagging",
+                "s3:GetObjectRetention"
+            ],
+            "Resource": [
+                "arn:aws:s3:::000-your-source-bucket",
+                "arn:aws:s3:::000-your-source-bucket/*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:ReplicateObject",
+                "s3:ReplicateDelete",
+                "s3:ReplicateTags"
+            ],
+            "Resource": "arn:aws:s3:::000-your-destination-bucket/*"
+        }
+    ]
+}
