@@ -1,4 +1,4 @@
-# For SAME REGION bucket synchronisation
+# For same account buckets' synchronisation
 
 import boto3
 
